@@ -1,0 +1,53 @@
+---
+title: 'Homework 2'
+author: "Craig Orman"
+date: "2/2/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#### Due: 2/9/2022 before 11:59pm. Submit in Canvas (file upload).
+
+
+1.\
+Zach Josten - <https://github.com/ZachJosten/Homework2-ZJ>\
+\
+Craig Orman - <https://github.com/ArgentCode/Homewwork2-CO>\
+\
+Number of pull requests made - 1\
+Requests made to - <https://github.com/ZachJosten/Homework2-ZJ>\
+\
+Number of pull requests accepted - \
+Requests accepted from - <>\
+\
+Tips for Git/Github  
+1. If working on a project, do pull requests frequently and look over pulls and forks to ensure you don't conflict with others.  \
+2. When attempting to merge, never use force. That means you did something wrong.\
+3. When in doubt, save your changes locally, delete everything, and reclone.\
+
+2. 
+```{r}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+t = read.csv("gapminder-5060.csv")
+usGap = subset(t, country == "United States")
+ausGap = subset(t, country == "Australia")
+finGap = rbind(usGap, ausGap)
+ggplot(data = finGap, aes(y = lifeExp, x = gdpPercap, group = country, color = country)) + geom_line()
+```
+
+3. write a paragraph.\
+Data science is an incredibly large field, and is usually applied to some particular domain. When something crosses the line between regular computer science and enters the realm of data science is entirely an opinion, but you can feel confident that you are in data science if you have to specifically hire people to move and manage your data. As data grows at an [increasing rate](https://insights.nikkoam.com/files/images/articles/2019/191219_whats_causing_the_exponential_01.png) we can tell the need for new specialists and more focus on the data itself. I will go over a couple of positions that have come up within the data science community. \
+1. Data Scientist \
+2. Data Engineer \
+3. Machine Learning Engineer \
+A data scientist is probably the hardest role of all of these. They require an incredibly in depth math and statistics background, along with a heavy touch of programming skills. By definition of the 'scientist' role, they typically explore new ideas in machine learning and artifical intelligence and seek new ways to explore data. Data Engineers are the primary stop for moving, transfering, cleaning, filtering, or any means of changing your peta-bytes of data. Machine Learning Engineers are more of the 'doers'. They typically write the actual code and use resources other data scientists have made to actually use the bulk data for a company. Data science as a field is super interesting, and will continue to grow in years to come! 
+    
+
+Note: your submission is supposed to be fully reproducible, i.e. the TA and I will 'knit' your submission in RStudio. Including the link to the image is the tricky part here. Make sure that you don't use any file structure that depends on your computing environment.
+
+
+For the submission: submit your solution in an **R Markdown file** and (just for insurance) submit the corresponding html (or Word) file with it. 
